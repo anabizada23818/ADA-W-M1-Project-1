@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat & Table Reservation</title>
+</head>
+<body>
+
+    <header class="site-header">
+        <h1>Canteen Seat Reservation</h1>
+    </header>
+
+    <main class="container">
+
+        <!-- Filters & selection summary -->
+        <section class="toolbar" aria-label="Seat filters">
+            <div class="filter-group">
+                <span class="filter-label">Filter Status:</span>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="available">Available</button>
+                <button class="filter-btn" data-filter="selected">Selected</button>
+                <button class="filter-btn" data-filter="reserved">Reserved</button>
+                <button class="filter-btn" data-filter="unavailable">Unavailable</button>
+            </div>
+            <output class="cart-summary" id="cart-summary">Selected Seats: 0</output>
+        </section>
+
+        <!-- Seat cards (static for now) -->
+        <section class="seats-grid" id="seats-container" aria-label="Seats">
+
+            <article class="seat-card">
+                <div class="seat-info">
+                    <header class="seat-header">
+                        <h3 class="seat-title">small table 1</h3>
+                        <span class="status-tag status-available">available</span>
+                    </header>
+                    <div class="seat-details">
+                        <p>Capacity: 2 Person(s)</p>
+                        <p>Type: Small round</p>
+                    </div>
+                    <button class="btn-action btn-select">Select Seat</button>
+                </div>
+            </article>
+
+            <article class="seat-card">
+                <div class="seat-info">
+                    <header class="seat-header">
+                        <h3 class="seat-title">small table 4</h3>
+                        <span class="status-tag status-reserved">reserved</span>
+                    </header>
+                    <div class="seat-details">
+                        <p>Capacity: 2 Person(s)</p>
+                        <p>Type: Small round</p>
+                    </div>
+                    <button class="btn-action btn-disabled" disabled>Unavailable</button>
+                </div>
+            </article>
+
+            <article class="seat-card">
+                <div class="seat-info">
+                    <header class="seat-header">
+                        <h3 class="seat-title">rectangular table 1</h3>
+                        <span class="status-tag status-available">available</span>
+                    </header>
+                    <div class="seat-details">
+                        <p>Capacity: 4 Person(s)</p>
+                        <p>Type: Rectangular</p>
+                    </div>
+                    <button class="btn-action btn-select">Select Seat</button>
+                </div>
+            </article>
+
+            <article class="seat-card">
+                <div class="seat-info">
+                    <header class="seat-header">
+                        <h3 class="seat-title">couch table 1</h3>
+                        <span class="status-tag status-available">available</span>
+                    </header>
+                    <div class="seat-details">
+                        <p>Capacity: 4 Person(s)</p>
+                        <p>Type: Couch table</p>
+                    </div>
+                    <button class="btn-action btn-select">Select Seat</button>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Canteen Reservation System Mockup</p>
+    </footer>
+
+</body>
+</html>
