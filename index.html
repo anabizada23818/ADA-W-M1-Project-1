@@ -23,81 +23,11 @@
                 <button class="filter-btn" data-filter="reserved">Reserved</button>
                 <button class="filter-btn" data-filter="unavailable">Unavailable</button>
             </div>
-            <output class="cart-summary" id="cart-summary">Selected Seats: 0</output>
+            <output class="cart-summary" id="cart-summary">Selected Seats: 0 · Total: 0.00 AZN</output>
         </section>
 
-        <!-- Seat cards (static for now) -->
-        <section class="seats-grid" id="seats-container" aria-label="Seats">
-
-            <article class="seat-card">
-                <div class="seat-preview">
-                    <img class="seat-image" src="images/small-table.jpg" alt="Small round table">
-                </div>
-                <div class="seat-info">
-                    <header class="seat-header">
-                        <h3 class="seat-title">small table 1</h3>
-                        <span class="status-tag status-available">available</span>
-                    </header>
-                    <div class="seat-details">
-                        <p>Capacity: 2 Person(s)</p>
-                        <p>Type: Small round</p>
-                    </div>
-                    <button class="btn-action btn-select">Select Seat</button>
-                </div>
-            </article>
-
-            <article class="seat-card">
-                <div class="seat-preview">
-                    <img class="seat-image" src="images/small-table.jpg" alt="Small round table">
-                </div>
-                <div class="seat-info">
-                    <header class="seat-header">
-                        <h3 class="seat-title">small table 4</h3>
-                        <span class="status-tag status-reserved">reserved</span>
-                    </header>
-                    <div class="seat-details">
-                        <p>Capacity: 2 Person(s)</p>
-                        <p>Type: Small round</p>
-                    </div>
-                    <button class="btn-action btn-disabled" disabled>Unavailable</button>
-                </div>
-            </article>
-
-            <article class="seat-card">
-                <div class="seat-preview">
-                    <img class="seat-image" src="images/rectangular-table.jpg" alt="Rectangular table">
-                </div>
-                <div class="seat-info">
-                    <header class="seat-header">
-                        <h3 class="seat-title">rectangular table 1</h3>
-                        <span class="status-tag status-available">available</span>
-                    </header>
-                    <div class="seat-details">
-                        <p>Capacity: 4 Person(s)</p>
-                        <p>Type: Rectangular</p>
-                    </div>
-                    <button class="btn-action btn-select">Select Seat</button>
-                </div>
-            </article>
-
-            <article class="seat-card">
-                <div class="seat-preview">
-                    <img class="seat-image" src="images/couch-table.jpg" alt="Couch table table">
-                </div>
-                <div class="seat-info">
-                    <header class="seat-header">
-                        <h3 class="seat-title">couch table 1</h3>
-                        <span class="status-tag status-available">available</span>
-                    </header>
-                    <div class="seat-details">
-                        <p>Capacity: 4 Person(s)</p>
-                        <p>Type: Couch table</p>
-                    </div>
-                    <button class="btn-action btn-select">Select Seat</button>
-                </div>
-            </article>
-
-        </section>
+        <!-- Seat cards, rendered from seats.js by basicLogic.js -->
+        <section class="seats-grid" id="seats-container" aria-label="Seats"></section>
 
     </main>
 
@@ -107,5 +37,6 @@
 
     <script src="seats.js" defer></script>
     <script src="data.js" defer></script>
+    <script src="basicLogic.js" defer></script>
 </body>
 </html>
