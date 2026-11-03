@@ -1,4 +1,6 @@
-// Seat list (flexbox cards) and app startup
+// Seat list (flexbox cards), filters and app startup
+
+let currentFilter = "all";
 
 const typeLabels = {
     [SeatType.SMALL]: "Small round",
@@ -11,7 +13,9 @@ function renderSeats() {
     const container = document.getElementById("seats-container");
     container.innerHTML = "";
 
-    seats.forEach(seat => {
+    seats
+        .filter(seat => currentFilter === "all" || seat.status === currentFilter)
+        .forEach(seat => {
         const card = document.createElement("article");
         card.className = "seat-card";
 
@@ -57,6 +61,20 @@ function renderSeats() {
     document.getElementById("cart-summary").textContent =
         `Selected Seats: ${selected.length} · Total: ${formatPrice(total)}`;
 }
+
+document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentFilter = btn.dataset.filter;
+        renderSeats();
+    });
+});
+
+document.getElementById("reset-storage-btn").addEventListener("click", () => {
+    resetSeats();
+    renderSeats();
+});
 
 loadSeats();
 renderSeats();
