@@ -92,4 +92,5 @@ function toggleSeatSelection(seatId) {
     seat.status = seat.status === SeatStatus.AVAILABLE ? SeatStatus.SELECTED : SeatStatus.AVAILABLE;
     saveSeats();
     renderSeats();
+    renderWorld();
 }

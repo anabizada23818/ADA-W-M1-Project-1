@@ -32,12 +32,24 @@
 
     </main>
 
-    <footer>
+    <!-- Top-down map view, rendered by topdown.js -->
+    <dialog id="topdown-modal" class="modal">
+        <div class="modal-content">
+            <button id="close-modal-btn" class="close-btn" aria-label="Close">&times;</button>
+            <h2>Canteen Floor Plan</h2>
+            <div id="topdown-viewport">
+                <div id="topdown-world"></div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- <footer>
         <p>&copy; 2026 Canteen Reservation System Mockup</p>
-    </footer>
+    </footer> -->
 
     <script src="seats.js" defer></script>
     <script src="data.js" defer></script>
+    <script src="topdown.js" defer></script>
     <script src="basicLogic.js" defer></script>
 </body>
 </html>
