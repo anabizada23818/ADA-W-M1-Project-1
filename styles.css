@@ -425,3 +425,87 @@ footer {
     opacity: 0.7;
 }
 
+/* ---------- Small screens ---------- */
+@media (max-width: 680px) {
+    .site-header {
+        padding: 0.75rem 1rem;
+        gap: 0.5rem;
+    }
+
+    .site-header h1 {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .seats-grid {
+        gap: 1rem;
+    }
+
+    .seat-card {
+        width: calc(50% - 0.5rem); /* 1 gap of 1rem / 2 */
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.75rem;
+        gap: 0.75rem;
+    }
+
+    .filter-label {
+        width: 100%;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .filter-btn {
+        flex: 1 1 auto;
+        padding: 0.55rem 0.6rem; /* bigger touch targets */
+    }
+
+    .cart-summary {
+        text-align: center;
+        font-size: 0.95rem;
+    }
+
+    /* Map takes the whole screen on phones */
+    .modal {
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh; /* excludes the mobile browser's address bar where supported */
+        max-width: 100vw;
+        max-height: 100dvh;
+        box-shadow: none;
+    }
+
+    .modal-content {
+        padding: 12px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+
+    .close-btn {
+        top: 12px;
+        right: 12px;
+        width: 2.5rem;
+        height: 2.5rem;
+        line-height: 1;
+    }
+
+    #topdown-viewport {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .seat-card {
+        width: 100%;
+    }
+}
