@@ -26,9 +26,9 @@ const SeatTypeImages = {
 // Price of reservation of each table
 const SeatTypeCost = {
     [SeatType.SMALL] : 2.0,
-    [SeatType.BIG] : 2.0,
-    [SeatType.RECTANGULAR] : 2.0,
-    [SeatType.COUCH_TABLE] : 2.0,
+    [SeatType.BIG] : 5.0,
+    [SeatType.RECTANGULAR] : 3.0,
+    [SeatType.COUCH_TABLE] : 7.0,
 }
 
 const CURRENCY = "AZN";
